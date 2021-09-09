@@ -4,78 +4,163 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Summary</title>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <title>Summary</title>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/styles/default.min.css">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
 </head>
 <body>
     <div class="content">
+
+        <!-- Header -->
         <header>
-            <h1>CV</h1>
+            <h1>Nikolay Masliy</h1>
         </header>
+        <!-- Header -->
+
+        <!-- Main content -->
         <main>
-            <h2>Nikolay Masliy</h2>
-            Nikolay Masliy
-Contacts
-* github: [nmasliy](https://github.com/nmasliy)
-* email: nikolaymasliy76@gmail.com
-* telegram: [@nmasliy](https://t.me/nmasliy)
+            <!-- Title -->
+            <div class="content__item row">
+                <div class="row__item row__text">
+                    <!-- About -->
+                    <div class="content__item">
+                        <h3>About me</h3>
+                        <p>
+                            I'm 22 years old. I have 2 years of experience in HTML/CSS coding. <br> Nowadays, my goal is to become a Frontend developer. 
+                        </p>
+                        <p>
+                            To do this, i need to improve my skills with the help of a mentor, learn to work with a team and, of course, practice a lot.
+                        </p>
+                    </div>
+                    <!-- /About -->
+                    <!-- Contacts -->
+                    <div class="row row--spacing">
+                        <div class="content__item row__item row__item--50">
+                            <h3>Contacts</h3>
+                            <ul>
+                                <li>github: <a href="https://github.com/nmasliy">@nmasliy</a></li>
+                                <li>email: <a href="mailto:nikolaymasliy76@gmail.com">nikolaymasliy76@gmail.com</a></li>
+                                <li>telegram: <a href="https://t.me/nmasliy">@nmasliy</a></li>
+                            </ul>
+                        </div>
+                        <!-- Skills -->
+                        <div class="content__item row__item row__item--50">
+                            <h3>My skills</h3>
+                            <ul>
+                                <li>HTML, CSS, BEM, Gulp</li>
+                                <li>JavaScript</li>
+                                <li>React (<i>Beginner</i>)</li>
+                                <li>Git</li>
+                            </ul>
+                        </div>
+                    <!-- /Skills -->
+                    </div>
+                    <!-- /Contacts -->
+                </div>
+                <div class="row__item row__img">
+                    <picture>
+                        <img width="250" class="content__img" src="avatar.jpg" alt="Nikolay Masliy">
+                    </picture>
+                </div>
+            </div>
+            <!-- /Title -->
+            <!-- <hr> -->
 
-About me
-I'm 22 years old. I have 2 years of experience in HTML/CSS coding. Nowadays, my goal is to become a Frontend developer.  To do this, i need to improve my skills with the help of a mentor and learn to work with a team and, of course, practice a lot.
-
-My skills
-* HTML, CSS, BEM, Gulp
-* JavaScript
-* React (Beginner)
-* Git
-
-Code example:
-<pre>
+            <!-- Code example -->
+            <div class="content__item">
+                <h3>Code example:</h3>
+                <pre>
     <code>
-        public static string SpinWords(string sentence)
-        {
-            string[] words = sentence.Split(' ');
-            
-            for (int i = 0; i < words.Length; i++) {
+    public static string SpinWords(string sentence)
+    {
+        string[] words = sentence.Split(' ');
         
-                if (words[i].Length >= 5) {
-        
-                    char[] letters = words[i].ToCharArray();
-                    Array.Reverse(letters);
-                    words[i] = string.Join("", letters);
-        
-                }
-        
+        for (int i = 0; i < words.Length; i++) {
+    
+            if (words[i].Length >= 5) {
+    
+                char[] letters = words[i].ToCharArray();
+                Array.Reverse(letters);
+                words[i] = string.Join("", letters);
+    
             }
-            
-            return string.Join(" ", words);
-            
+    
         }
-    </code>
-</pre>
-
-Work experience:
-1 year HTML/CSS coding on freelance and work with a regular customer. I felt that i was not progressing and wasting a lot of time, so i gave it up.
-
-2 months ago i decided to learn React and chose this youtube course which contains 100 lessons: [React-Samurai](https://www.youtube.com/playlist?list=PLcvhF2Wqh7DNVy1OCUpG3i5lyxyBWhGZ8). 
-
-After 2 months learning React i start practice and create [weather-app](https://github.com/nmasliy/react-weather-app).
-I finished this course a couple of days ago  and continue learning React on other resources.
-Besides the framework itself, i learned to work with server(AJAX), promises and other things, which i didn't understand before. I found out about project's architecture
-
-Education
-I graduated from college as a software technician. Now I am a 3rd year student at the university in a similar profession. The basis of my knowledge is made up of videos on YouTube and free courses.
-
-English
-My english level is Pre-Intermediate (A2).
-
-
+        
+        return string.Join(" ", words);
+    }
+    </code> </pre>
+            </div>
+            <!-- /Code example -->
+            <!-- Experience -->
+            <div class="content__item">
+                <h3>Work experience:</h3>
+                <p>
+                    1 year HTML/CSS coding on freelance and work with a regular customer. I felt that i was not progressing and wasting a lot of time, so i gave it up.
+                </p>
+                <p>
+                    2 months ago i decided to learn React and chose this youtube course which contains 100 lessons: <a href="https://www.youtube.com/playlist?list=PLcvhF2Wqh7DNVy1OCUpG3i5lyxyBWhGZ8">React-Samurai</a>. 
+                </p>
+                <p>
+                    After 2 months learning React i start practice and create <a href="https://github.com/nmasliy/react-weather-app">weather application</a>.
+                </p>
+                <p>
+                    I finished this course a couple of days ago  and continue learning React on other resources.
+                </p>
+                <p>
+                    Besides the framework itself, i learned to work with server(AJAX), promises and other things, which i didn't understand before. I found out about project's architecture and other fundamental things.
+                </p>
+            </div>
+            <!-- /Experience -->
+            <!-- Education -->
+            <div class="content__item">
+                <h3>Education</h3>
+                <p>
+                    I graduated from college as a software technician. Now I am a 3rd year student at the university in a similar profession. The basis of my knowledge is made up of videos on YouTube and free courses.
+                </p>
+            </div>
+            <!-- /Education -->
+            <!-- English -->
+            <div class="content__item">
+                <h3>English</h3>
+                <p>
+                    My english level is Pre-Intermediate <i>(A2)</i>. 
+                </p>
+                <p>
+                    I try to use the applications only in English
+                </p>
+            </div>
+            <!-- /English -->
         </main>
-        <footer>Footer</footer>
+        <!-- /Main content -->
+        <!-- Footer -->
+        <footer>
+            <div class="row footer__content">
+                <div class="row__item">
+                    <a href="https://rs.school/js/" class="footer__logo">
+                        <img width="100px" src="rs-school-js.svg" alt="Rolling Scopes JS">
+                    </a>
+                </div>
+                <div class="row__item">
+                    <a class="footer__link" href="https://github.com/nmasliy">
+                        <img src="github.svg" alt="Github">
+                        <span>nmasliy</span>
+                    </a>
+                    <div class="footer__date">2021</div>
+                </div>
+            </div>
+        </footer>
+        <!-- /Footer -->
+
     </div>
 </body>
 </html>
