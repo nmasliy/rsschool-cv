@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -11,12 +12,70 @@
     <title>Summary</title>
 </head>
 <body>
-    <header>
-        <h1>CV</h1>
-    </header>
-    <main>
-        <h2>Nikolay Masliy</h2>
-    </main>
-    <footer>Footer</footer>
+    <div class="content">
+        <header>
+            <h1>CV</h1>
+        </header>
+        <main>
+            <h2>Nikolay Masliy</h2>
+            Nikolay Masliy
+Contacts
+* github: [nmasliy](https://github.com/nmasliy)
+* email: nikolaymasliy76@gmail.com
+* telegram: [@nmasliy](https://t.me/nmasliy)
+
+About me
+I'm 22 years old. I have 2 years of experience in HTML/CSS coding. Nowadays, my goal is to become a Frontend developer.  To do this, i need to improve my skills with the help of a mentor and learn to work with a team and, of course, practice a lot.
+
+My skills
+* HTML, CSS, BEM, Gulp
+* JavaScript
+* React (Beginner)
+* Git
+
+Code example:
+<pre>
+    <code>
+        public static string SpinWords(string sentence)
+        {
+            string[] words = sentence.Split(' ');
+            
+            for (int i = 0; i < words.Length; i++) {
+        
+                if (words[i].Length >= 5) {
+        
+                    char[] letters = words[i].ToCharArray();
+                    Array.Reverse(letters);
+                    words[i] = string.Join("", letters);
+        
+                }
+        
+            }
+            
+            return string.Join(" ", words);
+            
+        }
+    </code>
+</pre>
+
+Work experience:
+1 year HTML/CSS coding on freelance and work with a regular customer. I felt that i was not progressing and wasting a lot of time, so i gave it up.
+
+2 months ago i decided to learn React and chose this youtube course which contains 100 lessons: [React-Samurai](https://www.youtube.com/playlist?list=PLcvhF2Wqh7DNVy1OCUpG3i5lyxyBWhGZ8). 
+
+After 2 months learning React i start practice and create [weather-app](https://github.com/nmasliy/react-weather-app).
+I finished this course a couple of days ago  and continue learning React on other resources.
+Besides the framework itself, i learned to work with server(AJAX), promises and other things, which i didn't understand before. I found out about project's architecture
+
+Education
+I graduated from college as a software technician. Now I am a 3rd year student at the university in a similar profession. The basis of my knowledge is made up of videos on YouTube and free courses.
+
+English
+My english level is Pre-Intermediate (A2).
+
+
+        </main>
+        <footer>Footer</footer>
+    </div>
 </body>
 </html>
