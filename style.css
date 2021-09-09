@@ -1,0 +1,148 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Alumni Sans', sans-serif;
+    font-size: 20px;
+    line-height: 1.3;
+    background-color: rgb(104, 103, 103);
+}
+
+a {
+    text-decoration: none;
+    color: rgb(27, 163, 204);
+}
+
+img {
+    max-width: 100%;
+}
+
+pre {
+    margin: 0;
+}
+
+code {
+    font-size: 16px;
+    line-height: 1.1;
+}
+
+p {
+    margin: 5px 0;
+}
+
+.content {
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 50px;
+    background-color: #fff;
+}
+
+.content__item {
+    border-bottom: 1px solid #000;
+    padding-bottom: 5px;
+}
+
+.content__item:last-child,
+.row .content__item {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.content__img {
+    width: 250px;
+    min-width: 200px;
+    max-height: 400px;
+    object-fit: cover;
+    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    border-radius: 5px;
+}
+
+
+.row__img {
+    flex: 1 0 auto;
+}
+
+.row__text {
+    max-width: calc(100% - 250px);
+    flex: 1 1 auto;
+    padding-right: 35px;
+}
+
+.row__text h2 {
+    margin-top: 0;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.row--spacing {
+    margin: 0 -15px;
+    overflow: hidden;
+}
+
+.row--spacing .row__item {
+    padding: 0 15px;
+}
+
+.footer__content {
+    padding-top: 30px;
+    margin-top: 30px;
+    padding-bottom: 0;
+    border-top: 1px solid #000;
+}
+
+.footer__link {
+    display: flex;
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.footer__link img {
+    flex-shrink: 0;
+    margin-right: 5px;
+}
+
+.footer__date {
+    margin-left: auto;
+    text-align: right;
+}
+
+.footer__logo {
+    flex-shrink: 0;
+}
+
+@media screen and (min-width: 769px) {
+    a:hover {
+        color: rgb(68, 41, 189);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 18px;
+    }
+
+    code {
+        font-size: 14px;
+    }
+
+    .row__text {
+        max-width: 100%;
+        padding-right: 0;
+    }
+    
+    .content {
+        padding: 25px;
+    }
+}
