@@ -7,15 +7,14 @@
 
     <title>Summary</title>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/styles/default.min.css">
-
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/highlight.min.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
+    <!-- Highlight with prism.js -->
+    <link href="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/themes/prism-tomorrow.css" rel="stylesheet" />
+    <!-- /Highlight with prism.js -->
 </head>
 <body>
     <div class="content">
@@ -79,25 +78,27 @@
             <div class="content__item">
                 <h3>Code example:</h3>
                 <pre>
-    <code>
-    public static string SpinWords(string sentence)
-    {
-        string[] words = sentence.Split(' ');
-        
-        for (int i = 0; i < words.Length; i++) {
-    
-            if (words[i].Length >= 5) {
-    
-                char[] letters = words[i].ToCharArray();
-                Array.Reverse(letters);
-                words[i] = string.Join("", letters);
-    
-            }
-    
+    <code class="language-javascript">
+export const initializeApp = () => {
+    const defaultCity = 'London';
+
+    return (dispatch) => {
+        const cities = JSON.parse(window.localStorage.getItem('cities')) || null;
+
+        if (cities) {
+            cities.forEach(item => {
+                dispatch(addCity(item.name));
+            });
+            dispatch(pickCity(cities[0].name))
+                .then(() => {
+                    dispatch(initializingSuccess());
+                });
         }
-        
-        return string.Join(" ", words);
+        else API.getUserCity()
+            .then(city => dispatch(initializeCity(city)))
+            .catch(() => dispatch(initializeCity(defaultCity)))
     }
+};
     </code> </pre>
             </div>
             <!-- /Code example -->
@@ -147,7 +148,7 @@
             <div class="row footer__content">
                 <div class="row__item">
                     <a href="https://rs.school/js/" class="footer__logo">
-                        <img width="100px" src="rs-school-js.svg" alt="Rolling Scopes JS">
+                        <img width="100" src="rs-school-js.svg" alt="Rolling Scopes JS">
                     </a>
                 </div>
                 <div class="row__item">
@@ -162,5 +163,10 @@
         <!-- /Footer -->
 
     </div>
+
+    <!-- Highlight with prism.js -->
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/components/prism-core.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/prism.min.js"></script>
+    <!-- /Highlight with prism.js -->
 </body>
 </html>
