@@ -1,5 +1,6 @@
 html {
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 *, *::before, *::after {
@@ -8,7 +9,7 @@ html {
 
 body {
     font-family: 'Alumni Sans', sans-serif;
-    font-size: 20px;
+    font-size: 21px;
     line-height: 1.3;
     background-color: rgb(104, 103, 103);
 }
@@ -33,6 +34,43 @@ code {
 
 p {
     margin: 5px 0;
+}
+
+h4, h5 {
+    margin: 15px 0;
+}
+
+h5 {
+    text-align: center;
+}
+
+.anchor-spacer {
+    height: 60px;
+    margin-top: -30px;
+    margin-bottom: -30px;
+}
+
+.header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: rgba(255,255,255, .9);
+    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+}
+
+.navigation__list {
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+    margin: 0 auto;
+    list-style: none;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.navigation__list li {
+    margin: 0 20px;
 }
 
 .content .language-javascript {
@@ -135,11 +173,7 @@ p {
 
 @media screen and (max-width: 768px) {
     body {
-        font-size: 18px;
-    }
-
-    code {
-        font-size: 14px;
+        font-size: 19px;
     }
 
     .row__text {
